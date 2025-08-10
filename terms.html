@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service</title>
+  <style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  text-align: center;
+  padding: 20px;
+}
+
+a {
+  color: #007BFF;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #ffffff;
+  padding: 20px 30px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  overflow-y: auto;
+  max-height: 80%;
+  position: relative;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.modal-content h3 {
+  color: #555;
+}
+
+.modal-content p {
+  line-height: 1.6;
+  color: #666;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+.modal-body {
+  margin-top: 10px;
+}
+</style>
+</head>
+<body>
+  <div class="content">
+    <h1>Welcome to Our Website</h1>
+    <p>
+      By using this website, you agree to our 
+      <a href="#" id="terms-service-link">Terms of Service</a>.
+    </p>
+  </div>
+
+  <!-- Terms of Service Modal -->
+  <div class="modal" id="terms-service-modal">
+    <div class="modal-content">
+      <span class="close" id="close-terms-service">&times;</span>
+      <h2>Terms of Service</h2>
+      <div class="modal-body">
+        <p>
+          *Welcome to [Your Website Name]!*  
+          These terms and conditions outline the rules and regulations for the use of our website. By accessing this website, you agree to accept all terms and conditions written here.
+        </p>
+        <h3>License</h3>
+        <p>
+          Unless otherwise stated, [Your Company Name] and/or its licensors own the intellectual property rights for all material on the website. All intellectual property rights are reserved. 
+        </p>
+        <h3>User Responsibilities</h3>
+        <p>
+          You must not:  
+          - Republish material from the website.  
+          - Sell, rent, or sub-license material.  
+          - Use the website in any way that causes damage or harm.  
+        </p>
+        <p>
+          For more details, please contact us at support@example.com.
+        </p>
+      </div>
+    </div>
+  </div>
+<script>
+const termsServiceModal = document.getElementById("terms-service-modal");
+const termsServiceLink = document.getElementById("terms-service-link");
+const closeTermsService = document.getElementById("close-terms-service");
+termsServiceLink.addEventListener("click", (e) => {
+  e.preventDefault();
+  termsServiceModal.style.display = "flex";
+});
+closeTermsService.addEventListener("click", () => {
+  termsServiceModal.style.display = "none";
+});
+
+window.addEventListener("click", (e) => {
+  if (e.target === termsServiceModal) {
+    termsServiceModal.style.display = "none";
+  }
+});
+</script>
+</body>
+</html>

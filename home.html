@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kaipo Natural Products - Discover nature's power with our pure, sustainably sourced wellness solutions.">
+    <title>Kaipo Natural Products</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        a{
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            background-color: #fff;
+        }
+        /* Navbar Styles */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 1rem;
+            color: white;
+        }
+        
+        .navbar .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style-type: none;
+            margin: 0;
+        }
+        
+        .nav-links li {
+            margin-left: 1.5rem;
+        }
+        
+        .nav-links li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        
+        .hamburger span {
+            height: 3px;
+            width: 25px;
+            background-color: white;
+            margin: 4px 0;
+            transition: 0.4s;
+        }
+        
+        /* Section Styles */
+        .section {
+            padding: 20px;
+            background-color: #fff;
+            margin: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section h2 {
+            color: #2c8c7e;
+            border-bottom: 2px solid #2c8c7e;
+            padding-bottom: 5px;
+        }
+        
+        .section p {
+            margin-top: 10px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #2c8c7e;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        
+        .btn:hover {
+            background-color: #256c65;
+        }
+        
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                background-color: #333;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+            }
+            
+            .nav-links li {
+                margin: 1rem 0;
+            }
+            
+            .hamburger {
+                display: flex;
+            }
+            
+            .nav-links.show {
+                display: flex;
+            }
+        }
+        footer {
+    text-align: center;
+    background-color: #0a0b0a;
+    color: white;
+    padding: 10px 0;
+  }
+  footer.footer-links a{
+            padding: 10px;
+            text-decoration: none;
+            color:white;
+            margin:0 10px;
+            font-size:1.5rem;
+            display: inline-block;
+  }
+  footer .social-icons {
+    margin: 10px 0;
+  }
+  footer .social-icons a {
+    text-decoration: none;
+    margin: 0 10px;
+    color: white;
+    font-size: 1.5rem;
+    display: inline-block;
+  }
+  footer .social-icons a:hover {
+    color: #007BFF;
+  }
+  @media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-links {
+        justify-content: center;
+        margin-top: 15px;
+    }
+    .footer-social {
+        margin-top: 15px;
+    }
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><a href="web.html">MyWebsite</a></div>
+        <ul class="nav-links">
+            <li><a href="D:\project\webproject.html\home.html">Home</a></li>
+            <li><a href="D:\project\webproject.html\about.html">About</a></li>
+            <li><a href="product2.html">product list</a></li>
+            <li><a href="D:\project\webproject.html\contact.html">Contact</a></li>
+            <li><a href="D:\project\webproject.html\achievements.html">Achievements</a></li>
+            <li><a href="D:\project\webproject.html\login.html">Login</a></li>
+            <li><a href="D:\project\webproject.html\stocklist.html">Stocklist</a></li>
+        </ul>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    <div class="header">
+            <img src="keva.png" alt="madhu" class="logo">
+            <h1 class="heading" style="color:crimson;text-align: center;font-size: 65px;">KEVA KAIPO INDUSTRIES PVT.LTD </h1>
+        </div>
+
+   <div class="container">
+        <section id="home" class="section">
+            <h2>Why Choose Kaipo?</h2>
+            <p><strong>Pure Ingredients:</strong> Our products are free from harmful chemicals, synthetic additives, and artificial preservatives. We harness nature’s best to create pure, effective, and safe solutions.</p>
+            <p><strong>Sustainably Sourced:</strong> We are committed to protecting the environment. That’s why we source our ingredients from sustainable farms and fair-trade suppliers.</p>
+            <p><strong>Holistic Wellness:</strong> Kaipo Natural Products support your holistic health journey, from skincare and beauty to supplements that nurture your body from the inside out.</p>
+        </section>
+
+        <section id="about" class="section">
+            <h2>Explore Our Range</h2>
+            <p>Whether you're looking for skincare solutions, natural supplements, or wellness products, Kaipo has something for everyone. Browse through our collections and find the perfect natural solution for your needs.</p>
+            <a href="product2.html" class="btn">Shop Now</a>
+        </section>
+        <section id="join-family" class="section">
+            <h2>Join the Kaipo Family</h2>
+            <p>Discover the difference natural products can make in your life. Join our community for exclusive offers, tips on living a healthy, natural lifestyle, and the latest updates on new products.</p>
+            <a href="D:\LAB\WEB\webproject.html\login.html" class="btn">Join Us</a>
+        </section>
+
+        <section id="achievements" class="section">
+            <h2>Our Achievements</h2>
+            <p>We are proud to be recognized for our commitment to quality, sustainability, and customer satisfaction. Join the Kaipo family and see why our customers trust us for their wellness journey.</p>
+        </section>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="social-icons">
+                    <a href="D:\project\webproject.html\about.html">About Us</a>
+                    <a href="services.html">Services</a>
+                    <a href="D:\project\webproject.html\contact.html">Contact</a>
+                    <a href="D:\project\webproject.html\privacy.html">Privacy Policy</a>
+                    <a href="D:\project\webproject.html\terms.html">Terms of Service</a>
+                </div>
+                <br>
+                <br>
+                    <div class="social-icons">
+                      <a href="https://www.facebook.com" target="_blank" title="Facebook">
+                        <i class="fab fa-facebook">F</i>
+                      </a>
+                      <a href="https://www.youtube.com" target="_blank" title="YouTube">
+                        <i class="fab fa-youtube">Y</i>
+                      </a>
+                      <a href="https://www.WhatsApp.com" target="_blank" title="WhatsApp">
+                        <i class="fab fa-whatsapp">W</i>
+                      </a>
+                      <p>&copy; 2024 Keva Kaipo. All rights reserved</p>
+                    </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('show');
+        }
+    </script>
+
+</body>
+</html>

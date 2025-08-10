@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .policy-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #privacyModal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+            width: 80%;
+            max-width: 600px;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        #privacyModal h2 {
+            margin: 0 0 10px;
+        }
+
+        #privacyModal p {
+            line-height: 1.5;
+        }
+
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+
+        .close-btn {
+            background: #f44336;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="policy-container">
+        <h1>Welcome to Keva Kapio</h1>
+        <p>
+            By using this site, you agree to our 
+            <button id="privacyPolicyBtn">Privacy Policy</button>.
+        </p>
+    </div>
+
+    <div class="modal-overlay" id="modalOverlay"></div>
+
+    <div id="privacyModal">
+        <h2>Privacy Policy</h2>
+        <p>
+            At Keva Kapio, your privacy is important to us. We collect personal information only 
+            for improving user experience. Your data is never shared without your consent.
+        </p>
+        <p>
+            If you have any questions about our Privacy Policy, feel free to contact us at support@kevakapio.com.
+        </p>
+        <button class="close-btn" id="closeModalBtn">Close</button>
+    </div>
+
+    <script>
+        const privacyPolicyBtn = document.getElementById('privacyPolicyBtn');
+        const privacyModal = document.getElementById('privacyModal');
+        const modalOverlay = document.getElementById('modalOverlay');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+
+        privacyPolicyBtn.addEventListener('click', () => {
+            privacyModal.style.display = 'block';
+            modalOverlay.style.display = 'block';
+        });
+
+        closeModalBtn.addEventListener('click', () => {
+            privacyModal.style.display = 'none';
+            modalOverlay.style.display = 'none';
+        });
+
+        modalOverlay.addEventListener('click', () => {
+            privacyModal.style.display = 'none';
+            modalOverlay.style.display = 'none';
+        });
+    </script>
+</body>
+</html>

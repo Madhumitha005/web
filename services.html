@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .services-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #servicesModal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+            width: 80%;
+            max-width: 600px;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        #servicesModal h2 {
+            margin: 0 0 10px;
+        }
+
+        #servicesModal ul {
+            list-style: disc;
+            padding-left: 20px;
+            line-height: 1.5;
+        }
+
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+
+        .close-btn {
+            background: #f44336;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="services-container">
+        <h1>Welcome to Keva Kapio</h1>
+        <p>
+            Learn more about the <button id="servicesBtn">Services We Offer</button>.
+        </p>
+    </div>
+
+    <div class="modal-overlay" id="modalOverlay"></div>
+
+    <div id="servicesModal">
+        <h2>Our Services</h2>
+        <p>At Keva Kapio, we are proud to offer the following services:</p>
+        <ul>
+            <li><strong>Consulting:</strong> Expert advice to help your business grow.</li>
+            <li><strong>Design Services:</strong> Custom web and graphic design solutions.</li>
+            <li><strong>Development:</strong> Full-stack development for web and mobile applications.</li>
+            <li><strong>Support:</strong> 24/7 customer support to address your needs.</li>
+        </ul>
+        <p>
+            For more details or custom services, contact us at support@kevakapio.com.
+        </p>
+        <button class="close-btn" id="closeServicesBtn">Close</button>
+    </div>
+
+    <script>
+        const servicesBtn = document.getElementById('servicesBtn');
+        const servicesModal = document.getElementById('servicesModal');
+        const modalOverlay = document.getElementById('modalOverlay');
+        const closeServicesBtn = document.getElementById('closeServicesBtn');
+
+        servicesBtn.addEventListener('click', () => {
+            servicesModal.style.display = 'block';
+            modalOverlay.style.display = 'block';
+        });
+
+        closeServicesBtn.addEventListener('click', () => {
+            servicesModal.style.display = 'none';
+            modalOverlay.style.display = 'none';
+        });
+
+        modalOverlay.addEventListener('click', () => {
+            servicesModal.style.display = 'none';
+            modalOverlay.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
