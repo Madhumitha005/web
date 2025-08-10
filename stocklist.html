@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock List - Keva Kapio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        a{
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        header {
+            background-color:white;
+            color:crimson;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+            border-radius: 50px;
+        }
+
+        #search-bar, #category-filter {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        thead {
+            background-color: #333;
+            color: white;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        button {
+            padding: 5px 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        button.out-of-stock {
+            background-color: #dc3545;
+        }
+
+        button.out-of-stock:hover {
+            background-color: #c82333;
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                background-color: #333;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+            }
+
+            .nav-links li {
+                margin: 1rem 0;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 1rem;
+            color: white;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+        
+        .navbar .logo {
+        color: white;
+        font-size: 1.5rem;
+    }
+    
+        .nav-links {
+            display: flex;
+            list-style-type: none;
+            margin: 0;
+        }
+        
+        .nav-links li {
+            margin-left: 1.5rem;
+        }
+        
+        .nav-links li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        
+        .hamburger span {
+            height: 3px;
+            width: 25px;
+            background-color: white;
+            margin: 4px 0;
+            transition: 0.4s;
+        }
+        footer {
+    text-align: center;
+    background-color: #0a0b0a;
+    color: white;
+    padding: 10px 0;
+  }
+  footer.footer-links a{
+            padding: 10px;
+            text-decoration: none;
+            color:white;
+            margin:0 10px;
+            font-size:1.5rem;
+            display: inline-block;
+  }
+  footer .social-icons {
+    margin: 10px 0;
+  }
+  footer .social-icons a {
+    text-decoration: none;
+    margin: 0 10px;
+    color: white;
+    font-size: 1.5rem;
+    display: inline-block;
+  }
+  footer .social-icons a:hover {
+    color: #007BFF;
+  }
+  @media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-links {
+        justify-content: center;
+        margin-top: 15px;
+    }
+    .footer-social {
+        margin-top: 15px;
+    }
+}
+    </style>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="web.html">MyWebsite</a></div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="product2.html">product list</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="achievements.html">Achievements</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="stocklist.html">Stocklist</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="contain">
+            <div class="container">
+            <h1 style="text-align: center;color:crimson;font-size: 50px;">STOCKLIST</h1>
+            </div>
+            </div>
+        <div class="controls">
+            <input type="text" id="search-bar" placeholder="Search products...">
+            <select id="category-filter">
+                <option value="all">All Categories</option>
+                <option value="Soap">Soap</option>
+                <option value="Shampoo">Shampoo</option>
+                <option value="Healthcare">Healthcare</option>
+                <option value="Stationery">Stationery</option>
+                <option value="Food">Food</option>
+                <option value="Fitness">Fitness</option>
+            </select>
+        </div>
+    </header>
+
+    <main>
+        <table id="stock-table">
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Stock</th>
+                </tr>
+            </thead>
+            <tbody id="stock-body">
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="social-icons">
+                    <a href="D:\LAB\WEB\webproject.html\about.html">About Us</a>
+                    <a href="services.html">Services</a>
+                    <a href="D:\LAB\WEB\webproject.html\contact.html">Contact</a>
+                    <a href="D:\LAB\WEB\webproject.html\privacy.html">Privacy Policy</a>
+                    <a href="D:\LAB\WEB\webproject.html\terms.html">Terms of Service</a>
+                </div>
+                <br>
+                <br>
+                    <div class="social-icons">
+                      <a href="https://www.facebook.com" target="_blank" title="Facebook">
+                        <i class="fab fa-facebook">F</i>
+                      </a>
+                      <a href="https://www.youtube.com" target="_blank" title="YouTube">
+                        <i class="fab fa-youtube">Y</i>
+                      </a>
+                      <a href="https://www.WhatsApp.com" target="_blank" title="WhatsApp">
+                        <i class="fab fa-whatsapp">W</i>
+                      </a>
+                      <p>&copy; 2024 Keva Kaipo. All rights reserved</p>
+                    </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const products = [
+            { name: "Keva Immune Booster",category:"Healthcare" ,price: "$20.00", stock:20 },
+            { name: "Keva Detox Tea",category:"food", price: "$15.00",stock:10 },
+            { name: "Keva Protein Powder",category:"Healthcare", price: "$30.00",stock:0},
+            { name: "Keva Herbal Syrup",category:"Healtcare", price: "$10.00", stock:5 },
+            { name: "Keva Calcium Plus",category:"Healthcare", price: "$25.00", stock:4 },
+            { name: "Keva Skincare Gel",category:"Healthcare", price: "$18.00",stock:0 },
+            { name: "Herbal Soap", category: "Soap", price: "$5.99", stock: 20 },
+            { name: "Luxury Soap", category: "Soap", price: "$7.99", stock: 10 },
+            { name: "Organic Shampoo", category: "Shampoo", price: "$9.99", stock: 15 },
+            { name: "Anti-Dandruff Shampoo", category: "Shampoo", price: "$8.99", stock: 0 },
+            { name: "Vitamin C Tablets", category: "Healthcare", price: "$12.99", stock: 30 },
+            { name: "Protein Powder", category: "Healthcare", price: "$29.99", stock: 5 },
+            { name: "Notebook", category: "Stationery", price: "$2.99", stock: 50 },
+            { name: "Pen Set", category: "Stationery", price: "$4.99", stock: 40 },
+            { name: "Healthy Snacks", category: "Food", price: "$6.99", stock: 25 },
+            { name: "Organic Cereal", category: "Food", price: "$4.99", stock: 0 },
+            { name: "Dumbbells", category: "Fitness", price: "$49.99", stock: 10 },
+            { name: "Yoga Mat", category: "Fitness", price: "$19.99", stock: 12 },
+        ];
+        const stockBody = document.getElementById("stock-body");
+        const searchBar = document.getElementById("search-bar");
+        const categoryFilter = document.getElementById("category-filter");
+        function renderStockTable() {
+            const searchQuery = searchBar.value.toLowerCase();
+            const selectedCategory = categoryFilter.value;
+
+            stockBody.innerHTML = ""; 
+
+            products.forEach((product) => {
+                const matchesSearch = product.name.toLowerCase().includes(searchQuery);
+                const matchesCategory = selectedCategory === "all" || product.category === selectedCategory;
+
+                if (matchesSearch && matchesCategory) {
+                    const row = document.createElement("tr");
+
+                    row.innerHTML = `
+                        <td>${product.name}</td>
+                        <td>${product.category}</td>
+                        <td>${product.price}</td>
+                        <td>${product.stock}</td>
+                    `;
+
+                    stockBody.appendChild(row);
+                }
+            });
+        }
+        searchBar.addEventListener("input", renderStockTable);
+        categoryFilter.addEventListener("change", renderStockTable);
+        renderStockTable();
+    </script>
+</body>
+</html>

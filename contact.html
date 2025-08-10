@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Kapio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        a{
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        h1 {
+            text-align: center;
+            color: #ed0707;
+            padding: 20px 0;
+        }
+        .section {
+            background: #fff;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .section h2 {
+            color: #2c8c7e;
+        }
+        .section p, .section li {
+            color: #555;
+            line-height: 1.6;
+        }
+        .contain {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            
+        }
+        body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #333;
+        padding: 1rem;
+    }
+    
+    .navbar .logo {
+        color: white;
+        font-size: 1.5rem;
+    }
+    
+    .nav-links {
+        display: flex;
+        list-style-type: none;
+    }
+    
+    .nav-links li {
+        margin-left: 1.5rem;
+    }
+    
+    .nav-links li a {
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+    }
+    
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+    }
+    
+    .hamburger span {
+        height: 3px;
+        width: 25px;
+        background-color: white;
+        margin: 4px 0;
+        transition: 0.4s;
+    }
+    @media (max-width: 768px) {
+        .nav-links {
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 0;
+            background-color: #333;
+            flex-direction: column;
+            width: 100%;
+            text-align: center;
+        }
+    
+        .nav-links li {
+            margin: 1rem 0;
+        }
+    
+        .hamburger {
+            display: flex;
+        }
+    
+        .nav-links.show {
+            display: flex;
+        }
+    }
+    footer {
+    text-align: center;
+    background-color: #0a0b0a;
+    color: white;
+    padding: 10px 0;
+  }
+  footer.footer-links a{
+            padding: 10px;
+            text-decoration: none;
+            color:white;
+            margin:0 10px;
+            font-size:1.5rem;
+            display: inline-block;
+  }
+  footer .social-icons {
+    margin: 10px 0;
+  }
+  footer .social-icons a {
+    text-decoration: none;
+    margin: 0 10px;
+    color: white;
+    font-size: 1.5rem;
+    display: inline-block;
+  }
+  footer .social-icons a:hover {
+    color: #007BFF;
+  }
+  @media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-links {
+        justify-content: center;
+        margin-top: 15px;
+    }
+    .footer-social {
+        margin-top: 15px;
+    }
+}
+    </style>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="web.html">MyWebsite</a></div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="D:\project\webproject.html\home.html">Home</a></li>
+                <li><a href="D:\project\webproject.html\about.html">About</a></li>
+                <li><a href="product2.html">product list</a></li>
+                <li><a href="D:\project\webproject.html\contact.html">Contact</a></li>
+                <li><a href="D:\project\webproject.html\achievements.html">Achievements</a></li>
+                <li><a href="D:\project\webproject.html\login.html">Login</a></li>
+                <li><a href="D:\project\webproject.html\stocklist.html">Stocklist</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+</head>
+<body>
+
+<div class="container">
+    <div class="contain">
+    <img src="keva.png" alt="madhu" class="logo">
+    <div class="container">
+    <h1 style="text-align: center;color:crimson;font-size:50px;">CONTACT US</h1>
+    </div>
+    </div>
+    
+    <div class="section" id="contact-info">
+        <h2>Contact Information</h2>
+        <p>If you have any questions or need further assistance, 
+            <br>please reach out to us using the following contact information:</p>
+        <p><strong>Phone:</strong> +1-234-567-890</p>
+        <p><strong>Email:</strong> support@kapio.com</p>
+        <p><strong>Address:</strong> 123 Kapio Avenue, Suite 456, City, Country</p>
+        <div class="section" id="map-location">
+            <h2>Our Location</h2>
+            <p>Visit us at our office location:</p>
+            <iframe 
+               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.83543450937!2d144.9537363156807!3d-37.81720997975148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDQ5JzAyLjAiUyAxNDTCsDU3JzE0LjEiRQ!5e0!3m2!1sen!2sus!4v1617678743515!5m2!1sen!2sus" 
+               width="50%" 
+               height="200" 
+               style="border:0;" 
+               allowfullscreen="" 
+               loading="lazy">
+             </iframe>
+        </div>   
+    </div>
+    <div class="section" id="bank-details">
+        <h2>Bank Details</h2>
+        <p>You may use the following bank information for official transactions:</p>
+        <ul>
+            <li><strong>Bank Name:</strong> Kapio Bank</li>
+            <li><strong>Account Holder:</strong> Kapio Corporation</li>
+            <li><strong>Account Number:</strong> 1234567890</li>
+            <li><strong>IFSC Code:</strong> KAPI0123456</li>
+            <li><strong>Branch:</strong> Main Branch, City</li>
+        </ul>
+    </div>
+    <div class="section" id="grievance-cell">
+        <h2>Grievance Cell</h2>
+        <p>If you have any grievances or complaints, please contact our grievance cell:</p>
+        <p><strong>Grievance Officer:</strong> John Doe</p>
+        <p><strong>Email:</strong> grievance@kapio.com</p>
+        <p><strong>Phone:</strong> +1-234-567-891</p>
+        <p>We aim to respond to all complaints within 48 hours. Thank you for helping us improve our services.</p>
+    </div>
+</div>
+<footer>
+    <div class="footer-container">
+        <div class="footer-content">
+            <div class="social-icons">
+                <a href="D:\project\webproject.html\about.html">About Us</a>
+                <a href="services.html">Services</a>
+                <a href="D:\project\webproject.html\contact.html">Contact</a>
+                <a href="D:\project\webproject.html\privacy.html">Privacy Policy</a>
+                <a href="D:\project\webproject.html\terms.html">Terms of Service</a>
+            </div>
+            <br>
+            <br>
+                <div class="social-icons">
+                  <a href="https://www.facebook.com" target="_blank" title="Facebook">
+                    <i class="fab fa-facebook">F</i>
+                  </a>
+                  <a href="https://www.youtube.com" target="_blank" title="YouTube">
+                    <i class="fab fa-youtube">Y</i>
+                  </a>
+                  <a href="https://www.WhatsApp.com" target="_blank" title="WhatsApp">
+                    <i class="fab fa-whatsapp">W</i>
+                  </a>
+                  <p>&copy; 2024 Keva Kaipo. All rights reserved</p>
+                </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
